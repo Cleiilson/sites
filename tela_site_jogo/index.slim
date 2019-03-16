@@ -1,0 +1,22 @@
+div.card
+  div.rules Pick 6 numbers and hit play.
+  div.nums
+    - for i in (1 .. 49)
+      div.num
+        input id="n#{i}" name="n" type="checkbox" value="#{i}"
+        label for="n#{i}" #{i}
+  button.play Play
+
+div.stats
+  div.stat.stat--spending
+    div.label 
+      | Spending 
+      div.sub $5 per play
+    div.value $0
+  div.stat.stat--weeks
+    div.label 
+      | Weeks
+      div.sub One play per week
+    div.value 0
+    
+div.results
